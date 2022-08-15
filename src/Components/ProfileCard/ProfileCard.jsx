@@ -6,6 +6,9 @@ import cover from '../../img/cover.jpg';
 import profileImg from '../../img/profileImg.jpg'
 
 const ProfileCard = () => {
+  // to costomize the card according to individual user profile
+  const ProfilePage = true;
+
   return (
     <div className='ProfileCard'>
       <div className="ProfileImages">
@@ -28,10 +31,23 @@ const ProfileCard = () => {
             <span>12</span>
             <span>Followers</span>
         </div>
+        {ProfilePage && (
+          <>
+            <div className="vl">
+
+            </div>
+            <div className="follow">
+              <span>3</span>
+              <span>Posts</span> 
+            </div>
+          </>
+        )}
         </div>
         <hr />
       </div>
-      <span className='profileLink'>My Profile</span>
+      {/* to disable my prfoile link if the page is true */}
+      {ProfilePage? '': 
+      <span className='profileLink'>My Profile</span>}
     </div>
   )
 }

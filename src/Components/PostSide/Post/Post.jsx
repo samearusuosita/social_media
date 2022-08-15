@@ -1,13 +1,17 @@
 import React from 'react';
 import './Post.scss';
-import Comment from '../../../img/comment.png'
-import Share from '../../../img/share.png'
-import like from '../../../img/like.png'
-import NotLike from '../../../img/notlike.png'
-import Home from '../../../img/home.png'
+import Comment from '../../../img/comment.png';
+import Share from '../../../img/share.png';
+// import like from '../../../img/like.png';
+import NotLike from '../../../img/notlike.png';
+import Home from '../../../img/home.png';
+
+
+
+
 const Post = ({data}) => {
   return (
-    <div className="Post">
+    <div className="Post" key={data.index}>
         <img src={data.img} alt="" className='postImage'/>
 
         <div className="postReact">
@@ -16,7 +20,7 @@ const Post = ({data}) => {
         <img src={Share} alt="" />
         </div>
 
-        <span>{data.likes} Likes</span>
+        <span style={{color: 'var(--gray)', fontSize: '15px'}}>{data.likes} Likes</span>
         <div className="details">
             <span><b>{data.name}</b></span>
             <span> {data.desc}</span>
