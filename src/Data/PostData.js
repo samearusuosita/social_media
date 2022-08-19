@@ -8,7 +8,7 @@ export const PostData = [
         name: 'Tzuyu',
         desc: 'Happy New Year all friends! #2023',
         likes: 2300,
-        liked: false
+        liked: true
     },
     {
         img: postPic2,
@@ -22,6 +22,6 @@ export const PostData = [
         name: 'mikeMo james',
         desc: 'At Archery Festival',
         likes: 300,
-        liked: false
+        liked: true
     },
 ];

@@ -2,9 +2,8 @@ import React from 'react';
 import './Post.scss';
 import Comment from '../../../img/comment.png';
 import Share from '../../../img/share.png';
-// import like from '../../../img/like.png';
+import like from '../../../img/like.png';
 import NotLike from '../../../img/notlike.png';
-import Home from '../../../img/home.png';
 
 
 
@@ -15,7 +14,7 @@ const Post = ({data}) => {
         <img src={data.img} alt="" className='postImage'/>
 
         <div className="postReact">
-        <img src={data.liked ? Home: NotLike} alt="" className='reactImage'/>
+        <img src={data.liked ? like: NotLike} alt="" className='reactImage'/>
         <img src={Comment} alt="" />
         <img src={Share} alt="" />
         </div>
