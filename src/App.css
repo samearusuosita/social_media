@@ -53,3 +53,10 @@
 ::-webkit-scrollbar{
   display: none;
 }
+
+/* disable btn during loading */
+
+.button:disabled{
+  background: silver;
+  pointer-events: none;
+}

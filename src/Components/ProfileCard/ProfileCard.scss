@@ -79,12 +79,14 @@
     
                 span:nth-of-type(1){ 
                     font-weight: bold;
-                }
-    
-                span:nth-of-type(1){ 
                     color: var(--gray);
                     font-size: 13px;
                 }
+    
+                // span:nth-of-type(1){ 
+                //     color: var(--gray);
+                //     font-size: 13px;
+                // }
             }
 
         }
