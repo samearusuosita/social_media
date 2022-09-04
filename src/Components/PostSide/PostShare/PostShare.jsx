@@ -11,7 +11,7 @@ import { UploadImage, uploadPost} from '../../../actions/uploadAction';
 
 
 const PostShare = () => {
-
+    const loading = useSelector((state) => state.postReducer.uploading)
     const [image, setImage] = useState(null);
     const imageRef = useRef();
     const dispatch = useDispatch();
@@ -24,8 +24,14 @@ const PostShare = () => {
     const onImageChange =(event) =>{
         if(event.target.files && event.target.files[0]){
             let img = event.target.files[0];
-            setImage(img)
+            setImage(img);
         }
+    }
+
+    // reset componet after upload
+    const reset = () => {
+        setImage(null);
+        desc.current.value="";
     }
 
 
@@ -51,6 +57,7 @@ const PostShare = () => {
                 console.log(error)
             }
         } dispatch(uploadPost(newPost))
+        reset()
     
     }
 
@@ -82,7 +89,10 @@ const PostShare = () => {
             <UilSchedule/>
             Shedule
         </div>
-        <button className="button ps-button" onClick={handleSubmit}>Share</button>
+        <button className="button ps-button" 
+        onClick={handleSubmit}
+        disabled={loading}>
+        {loading? "Uploading..." : "Share" }</button>
         
         {/* hide the input btn and use its reference */}
         <div style={{display: "none"}}>

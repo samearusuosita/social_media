@@ -8,7 +8,7 @@ const LogoSearch = () => {
     <div className='LogoSearch'>
       <img src={Logo} alt="logo" />
       <div className="Search">
-        <input type="text" placeholder='#Explore' />
+        <input type="text" placeholder='#Search People' />
         <div className="s-icon">
             <UilSearch/>
         </div>

@@ -1,6 +1,6 @@
 .Followers{
     width: 100%;
-    border-radius: 0.7rem;
+    // border-radius: 0.7rem;
     gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -40,5 +40,13 @@
         height: 2rem;
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .unfollowBtn{
+        color: var(--orange);
+        border: 2px solid  var(--orange);
+        cursor: pointer;
+        background: transparent;
+
     }
 }

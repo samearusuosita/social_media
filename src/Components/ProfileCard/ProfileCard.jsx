@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 
 
 
-const ProfileCard = (location) => {
+const ProfileCard = ({location}) => {
   
   // extract user info from redux store
   const {user} = useSelector((state) => state.authReducer.authData)
@@ -26,7 +26,7 @@ const posts = useSelector ((state) => state.postReducer.posts)
     <div className='ProfileCard'>
       <div className="ProfileImages">
         <img src={user.coverPicture? serverPublic + user.coverPicture: serverPublic + "defaultCover.jpg"} alt="" />
-        <img src={user.defaultProfile? serverPublic + user.defaultProfile: serverPublic + "defaultProfile.jpg"} alt="" />
+        <img src={user.profilePicture? serverPublic + user.profilePicture: serverPublic + "defaultProfile.jpg"} alt="" />
       </div>
       <div className="ProfileName">
         <span>{user.firstname} {user.lastname}</span>
@@ -50,7 +50,7 @@ const posts = useSelector ((state) => state.postReducer.posts)
 
             </div>
             <div className="follow">
-              <span>{posts.filter((post) => post.uderId === user._id.length)}</span>
+              <span>{posts.filter((post) => post.userId === user._id).length}</span>
               <span>Posts</span> 
             </div>
           </>
