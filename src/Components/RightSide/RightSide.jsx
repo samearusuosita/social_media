@@ -23,7 +23,10 @@ const RightSide = () => {
             <Link to = '../home' ><img src={Home} alt="Home_page" /></Link>
             <UilSetting/>
             <img src={Noti} alt="Notification" />
-            <img src={Comment} alt="Comment" />
+            
+            <Link to = '../chat'>
+              <img src={Comment} alt="Comment" />
+            </Link>
         </div>
 
        <TrendCard/>
