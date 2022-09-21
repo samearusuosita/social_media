@@ -4,6 +4,7 @@ import { addMessage, getMessages } from "../../api/MessageRequests";
 import "./ChatBox.scss";
 import { format } from "timeago.js";
 import InputEmoji from "react-input-emoji";
+// import Picker from "emoji-picker-react";
 import { getUser } from "../../api/UserRequest";
 
 
@@ -96,6 +97,15 @@ useEffect(()=> {
   const scroll = useRef();
   const imageRef = useRef();
 
+
+// // emoji
+//   const [chosenEmoji, setChosenEmoji] = useState(null);
+
+//   const onEmojiClick = (event, emojiObject) => {
+//     setChosenEmoji(emojiObject);
+//   };
+
+
   return (
     <>
       <div className="ChatBox-container">
@@ -156,6 +166,7 @@ useEffect(()=> {
                 {/* adding image and file to chats */}
               <div onClick={() => imageRef.current.click()}>+</div>
               {/* using input emoji in chats */}
+              
               <InputEmoji
                 value={newMessage}
                 onChange={handleChange}
@@ -165,6 +176,28 @@ useEffect(()=> {
                 theme="auto"
                 className="React-inputEmoji"
               />
+
+              {/* <textarea cols="20" rows="5" className="inputtext" value={newMessage}
+                onChange={handleChange}
+                placeholder="Type a message"></textarea> */}
+              
+              
+              
+              {/* <input type="text" className="chatInput"/> */}
+
+
+
+               {/* <div>
+                  {chosenEmoji ? (
+                  <span>You chose: {chosenEmoji.emoji}</span>
+                  ) : (
+                  <span>No emoji Chosen</span>
+                  )}
+                  <Picker onEmojiClick={onEmojiClick} />
+                </div> */}
+
+
+
               {/* sending message to users */}
               <div className="send-button button" onClick = {handleSend}>Send</div>
               <input

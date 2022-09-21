@@ -4070,6 +4070,11 @@
     "@babel/runtime" "^7.0.0"
     "prop-types" "^15.6.0"
 
+"emoji-picker-react@^3.6.2":
+  "integrity" "sha512-PK3dfljGxeyN8fDz2FAsDYKPYGgo6/tkRyzJjLVaw0fksJg7jA3OJPIlHq2IIzTmlC/NKhcI/oaf0uEo5azYGA=="
+  "resolved" "https://registry.npmjs.org/emoji-picker-react/-/emoji-picker-react-3.6.2.tgz"
+  "version" "3.6.2"
+
 "emoji-regex@^8.0.0":
   "integrity" "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A=="
   "resolved" "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"
@@ -6067,6 +6072,11 @@
     "@jest/core" "^27.5.1"
     "import-local" "^3.0.2"
     "jest-cli" "^27.5.1"
+
+"jquery@>=1.5.0 <4.0":
+  "integrity" "sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.1.tgz"
+  "version" "3.6.1"
 
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
@@ -8895,6 +8905,13 @@
   "integrity" "sha512-a7wPxPdVlQL7lqvitHGGRsofhdwtkoSXPGATFuSOA2i1ZNQEPLrGnj68vOp2sOJTCFAQVXPeNMX/GctBaO9L2w=="
   "resolved" "https://registry.npmjs.org/timeago.js/-/timeago.js-4.0.2.tgz"
   "version" "4.0.2"
+
+"timeago@^1.6.7":
+  "integrity" "sha512-FikcjN98+ij0siKH4VO4dZ358PR3oDDq4Vdl1+sN9gWz1/+JXGr3uZbUShYH/hL7bMhcTpPbplJU5Tej4b4jbQ=="
+  "resolved" "https://registry.npmjs.org/timeago/-/timeago-1.6.7.tgz"
+  "version" "1.6.7"
+  dependencies:
+    "jquery" ">=1.5.0 <4.0"
 
 "tmpl@1.0.5":
   "integrity" "sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw=="

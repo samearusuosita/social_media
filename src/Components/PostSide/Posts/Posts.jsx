@@ -32,7 +32,8 @@ const Posts = () => {
     <div className="Post">
       {/* checking if there is post before loading post */}
       {loading? "Fetching Posts..." : posts.map((post, id) =>{
-        return(<Post data={post} id={id} key={post.id}/>)
+        return(<Post data={post} id={id} key={post.id}/>
+        )
       })}
       
     </div>

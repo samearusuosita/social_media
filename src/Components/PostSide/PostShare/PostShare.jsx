@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import "./PostShare.scss";
-// import profileImg from '../../../img/profileImg.jpg';
+
 import {UilScenery} from "@iconscout/react-unicons";
 import {UilPlayCircle} from '@iconscout/react-unicons';
 import {UilLocationPoint} from '@iconscout/react-unicons';
@@ -15,6 +15,7 @@ const PostShare = () => {
     const [image, setImage] = useState(null);
     const imageRef = useRef();
     const dispatch = useDispatch();
+
 
     const desc = useRef();
 
@@ -61,12 +62,11 @@ const PostShare = () => {
     
     }
 
-    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
-
-
   return (
     <div className="PostShare">
-      <img src={user.defaultProfile? serverPublic + user.defaultProfile: serverPublic + "defaultProfile.jpg"} alt='' className="profilePostShare"/>
+      <img src={user?.profilePicture? process.env.REACT_APP_PUBLIC_FOLDER + 
+        user.profilePicture : process.env.REACT_APP_PUBLIC_FOLDER 
+        + "defaultProfile.jpg" } alt="Profile" className="profilePostShare"/>
       <div className='inputeDiv'>
         <input 
         ref={desc} required
