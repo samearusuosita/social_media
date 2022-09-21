@@ -1,4 +1,4 @@
-// install axios
+// install axios package
 // declar "proxy": "http://localhost:5000", in package.json
 
 import axios from 'axios';
